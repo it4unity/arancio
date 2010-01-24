@@ -1,0 +1,42 @@
+<h1>Listing peoples</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Adress</th>
+    <th>Number</th>
+    <th>Complement</th>
+    <th>Postal</th>
+    <th>City</th>
+    <th>Tel res</th>
+    <th>Tel cel</th>
+    <th>Tel com</th>
+    <th>Email</th>
+    <th>Birth</th>
+  </tr>
+
+<% for people in @peoples %>
+  <tr>
+    <td><%=h people.id %></td>
+    <td><%=h people.name %></td>
+    <td><%=h people.adress %></td>
+    <td><%=h people.number %></td>
+    <td><%=h people.complement %></td>
+    <td><%=h people.postal %></td>
+    <td><%=h people.city %></td>
+    <td><%=h people.tel_res %></td>
+    <td><%=h people.tel_cel %></td>
+    <td><%=h people.tel_com %></td>
+    <td><%=h people.email %></td>
+    <td><%=h people.birth %></td>
+    <td><%= link_to 'Show', people %></td>
+    <td><%= link_to 'Edit', edit_people_path(people) %></td>
+    <td><%= link_to 'Destroy', people, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New people', new_people_path %>

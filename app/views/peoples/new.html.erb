@@ -1,0 +1,59 @@
+<h1>New people</h1>
+
+<% form_for(@people) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :adress %><br />
+    <%= f.text_area :adress %>
+  </p>
+  <p>
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </p>
+  <p>
+    <%= f.label :complement %><br />
+    <%= f.text_field :complement %>
+  </p>
+  <p>
+    <%= f.label :postal %><br />
+    <%= f.text_field :postal %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :tel_res %><br />
+    <%= f.text_field :tel_res %>
+  </p>
+  <p>
+    <%= f.label :tel_cel %><br />
+    <%= f.text_field :tel_cel %>
+  </p>
+  <p>
+    <%= f.label :tel_com %><br />
+    <%= f.text_field :tel_com %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :birth %><br />
+    <%= f.date_select :birth %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', peoples_path %>

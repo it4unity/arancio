@@ -1,0 +1,4 @@
+# criação do scaffold da tabela people
+script/generate scaffold people id:serial name:string adress:text number:string complement:string postal:string city:integer tel_res:string tel_cel:string tel_com:string email:string birth:date
+
+

@@ -8,3 +8,381 @@ Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-01-24 14:47:3
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
   [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
 Completed in 19ms (View: 1, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 14:55:01) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering home/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:01:07) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering home/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (172.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (72.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeoples (20100124170005)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeoples (20100124170005)
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE `peoples` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `adress` text, `number` varchar(255), `complement` varchar(255), `postal` varchar(255), `city` int(11), `tel_res` varchar(255), `tel_cel` varchar(255), `tel_com` varchar(255), `email` varchar(255), `birth` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100124170005')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `peoples`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `peoples`[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:04:17) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering home/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:07:05) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering home/index
+
+
+ActionView::TemplateError (undefined local variable or method `posts_path' for #<ActionView::Base:0xb6d87834>) on line #2 of app/views/home/index.html.erb:
+1: <h1>Hello, Rails!</h1>
+2: <%= link_to "My Arancio", posts_path %>
+
+    app/views/home/index.html.erb:2
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1251:in `default_render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/volo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/volo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/webrick_server.rb:103:in `handle_dispatch'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/webrick_server.rb:60:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (35.3ms)
+Rendered /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.6ms)
+Rendering /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:07:20) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering home/index
+
+
+ActionView::TemplateError (undefined local variable or method `posts_path' for #<ActionView::Base:0xb6e83cb0>) on line #2 of app/views/home/index.html.erb:
+1: <h1>Hello, Rails!</h1>
+2: <%= link_to "My Blog", posts_path %>
+
+    app/views/home/index.html.erb:2
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1251:in `default_render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/volo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/volo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/webrick_server.rb:103:in `handle_dispatch'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/webrick_server.rb:60:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (38.2ms)
+Rendered /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:08:09) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering home/index
+
+
+ActionView::TemplateError (people_url failed to generate from {:action=>"show", :controller=>"peoples"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["peoples", :id] - are they all satisfied?) on line #2 of app/views/home/index.html.erb:
+1: <h1>Hello, Rails!</h1>
+2: <%= link_to "Arancio", people_path %>
+
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/routing/route_set.rb:385:in `raise_named_route_error'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/routing/route_set.rb:345:in `generate'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/url_rewriter.rb:208:in `rewrite_path'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/url_rewriter.rb:187:in `rewrite_url'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/url_rewriter.rb:165:in `rewrite'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:626:in `url_for'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/url_helper.rb:85:in `send'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/url_helper.rb:85:in `url_for'
+    (eval):16:in `people_path'
+    app/views/home/index.html.erb:2
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1251:in `default_render'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/volo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/volo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/webrick_server.rb:103:in `handle_dispatch'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/webrick_server.rb:60:in `dispatch'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/volo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/volo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (37.5ms)
+Rendered /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.6ms)
+Rendering /home/volo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:08:48) [GET]
+  [4;35;1mSQL (0.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering home/index
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PeoplesController#index (for 127.0.0.1 at 2010-01-24 15:08:49) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPeople Load (0.3ms)[0m   [0mSELECT * FROM `peoples` [0m
+Rendering template within layouts/peoples
+Rendering peoples/index
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/peoples]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:09:54) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering home/index
+Completed in 4ms (View: 1, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PeoplesController#index (for 127.0.0.1 at 2010-01-24 15:09:58) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPeople Load (0.1ms)[0m   [0;1mSELECT * FROM `peoples` [0m
+Rendering template within layouts/peoples
+Rendering peoples/index
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/peoples]
+
+
+Processing PeoplesController#new (for 127.0.0.1 at 2010-01-24 15:10:00) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPeople Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+Rendering template within layouts/peoples
+Rendering peoples/new
+Completed in 115ms (View: 108, DB: 1) | 200 OK [http://localhost/peoples/new]
+
+
+Processing PeoplesController#create (for 127.0.0.1 at 2010-01-24 15:11:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"841eb6a556ca13c1c52f766d44898568de7e3334", "people"=>{"tel_com"=>"51 8193-0435", "city"=>"1", "number"=>"417", "name"=>"Eduardo Cordeiro", "postal"=>"90690-410", "adress"=>"Rua Prof. Ivo Corseiul", "id"=>"", "birth(1i)"=>"2005", "complement"=>"Petrópolis", "birth(2i)"=>"9", "birth(3i)"=>"11", "email"=>"educordeiro@gmail.com", "tel_cel"=>"51 8193-0435", "tel_res"=>"51 3334-2579"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPeople Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `peoples`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPeople Create (0.2ms)[0m   [0;1mINSERT INTO `peoples` (`name`, `number`, `city`, `tel_com`, `birth`, `created_at`, `postal`, `updated_at`, `adress`, `complement`, `tel_res`, `tel_cel`, `email`) VALUES('Eduardo Cordeiro', '417', 1, '51 8193-0435', '2005-09-11', '2010-01-24 17:11:02', '90690-410', '2010-01-24 17:11:02', 'Rua Prof. Ivo Corseiul', 'Petrópolis', '51 3334-2579', '51 8193-0435', 'educordeiro@gmail.com')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+Redirected to #<People:0xb6eb12c8>
+Completed in 16ms (DB: 3) | 302 Found [http://localhost/peoples]
+
+
+Processing PeoplesController#show (for 127.0.0.1 at 2010-01-24 15:11:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPeople Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `peoples`[0m
+  [4;35;1mPeople Load (55.5ms)[0m   [0mSELECT * FROM `peoples` WHERE (`peoples`.`id` = 1) [0m
+Rendering template within layouts/peoples
+Rendering peoples/show
+Completed in 78ms (View: 13, DB: 57) | 200 OK [http://localhost/peoples/1]
+
+
+Processing PeoplesController#index (for 127.0.0.1 at 2010-01-24 15:11:06) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPeople Load (0.2ms)[0m   [0;1mSELECT * FROM `peoples` [0m
+Rendering template within layouts/peoples
+Rendering peoples/index
+  [4;35;1mPeople Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/peoples]
+
+
+Processing PeoplesController#show (for 127.0.0.1 at 2010-01-24 15:11:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPeople Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `peoples`[0m
+  [4;35;1mPeople Load (0.1ms)[0m   [0mSELECT * FROM `peoples` WHERE (`peoples`.`id` = 1) [0m
+Rendering template within layouts/peoples
+Rendering peoples/show
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/peoples/1]
+
+
+Processing PeoplesController#index (for 127.0.0.1 at 2010-01-24 15:11:14) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPeople Load (0.1ms)[0m   [0;1mSELECT * FROM `peoples` [0m
+Rendering template within layouts/peoples
+Rendering peoples/index
+  [4;35;1mPeople Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/peoples]
